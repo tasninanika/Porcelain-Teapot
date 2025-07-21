@@ -1,0 +1,30 @@
+.header-bg,
+.footer-bg {
+    background-image: url('../images/more/header.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-color: black;
+}
+
+.title {
+    font-family: 'Rancho';
+}
+
+.hero {
+    background-image: url('../images/more/hero.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-color: black;
+}
+
+
+/* Common Styles */
+p {
+    font-family: 'Poppins';
+}
+
+.text-shadow {
+    text-shadow: 1px 0.7px 0px #5c2c06;
+}
