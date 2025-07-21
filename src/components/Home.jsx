@@ -19,7 +19,7 @@ const Home = () => {
   const [teas, setTeas] = useState([]);
   const [loading, setLoading] = useState(true);
   useEffect(() => {
-    fetch("https://porcelain-teapot-server-g165.vercel.app/teas")
+    fetch("https://porcelain-teapot-server-jmmi.vercel.app/teas")
       .then((res) => res.json())
       .then((data) => {
         setTeas(data);

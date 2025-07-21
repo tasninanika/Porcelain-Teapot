@@ -14,7 +14,7 @@ const AddTea = () => {
     const details = form.details.value;
     const photo = form.photo.value;
     const price = form.price.value;
-    const newCoffee = {
+    const newTea = {
       name,
       chef,
       category,
@@ -26,12 +26,12 @@ const AddTea = () => {
     };
 
     // Sending data to the backend
-    fetch("https://porcelain-teapot-server-g165.vercel.app/teas", {
+    fetch("https://porcelain-teapot-server-jmmi.vercel.app/teas", {
       method: "POST",
       headers: {
         "content-type": "application/json",
       },
-      body: JSON.stringify(newCoffee),
+      body: JSON.stringify(newTea),
     })
       .then((res) => res.json())
       .then((data) => {
