@@ -27,16 +27,13 @@ const UpdateTea = () => {
     };
 
     // Sending data to the backend
-    fetch(
-      `https://espresso-emporium-server-nine.vercel.app/coffees/${data._id}`,
-      {
-        method: "PUT",
-        headers: {
-          "content-type": "application/json",
-        },
-        body: JSON.stringify(updatedCoffee),
-      }
-    )
+    fetch(`https://porcelain-teapot-server-g165.vercel.app/teas/${data._id}`, {
+      method: "PUT",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(updatedCoffee),
+    })
       .then((res) => res.json())
       .then((data) => {
         if (data) {
