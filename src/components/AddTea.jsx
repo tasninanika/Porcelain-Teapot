@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 
 const AddTea = () => {
-  const handleAddCoffee = (e) => {
+  const handleAddTea = (e) => {
     e.preventDefault();
     const form = e.target;
     const name = form.name.value;
@@ -26,7 +26,7 @@ const AddTea = () => {
     };
 
     // Sending data to the backend
-    fetch("https://espresso-emporium-server-nine.vercel.app/coffees", {
+    fetch("https://porcelain-teapot-server-g165.vercel.app/teas", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -59,7 +59,7 @@ const AddTea = () => {
             showcase your premium selections.
           </p>
         </div>
-        <form onSubmit={handleAddCoffee}>
+        <form onSubmit={handleAddTea}>
           {/* Coffe & Chef name input field added */}
           <div className="grid lg:grid-cols-2 grid-cols-1 gap-5">
             <div>

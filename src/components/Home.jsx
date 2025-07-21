@@ -3,7 +3,7 @@ import "./Styles.css";
 import Cup from "../images/icons/cup_icon.png";
 import Badge from "../images/icons/badge.png";
 import Grains from "../images/icons/grains.png";
-import Coffee from "../images/icons/1.png";
+import Coffee from "../images/icons/coffee.png";
 import Cup1 from "../images/cups/Cup1.png";
 import Cup2 from "../images/cups/Cup2.png";
 import Cup3 from "../images/cups/Cup3.png";
