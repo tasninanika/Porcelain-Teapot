@@ -25,10 +25,18 @@ const router = createBrowserRouter([
       {
         path: "/teas/:id",
         element: <TeaDetails></TeaDetails>,
+        loader: ({ params }) =>
+          fetch(
+            `https://porcelain-teapot-server-g165.vercel.app/teas/${params.id}`
+          ),
       },
       {
         path: "/updateTea/:id",
         element: <UpdateTea></UpdateTea>,
+        loader: ({ params }) =>
+          fetch(
+            `https://porcelain-teapot-server-g165.vercel.app/teas/${params.id}`
+          ),
       },
       {
         path: "*",
