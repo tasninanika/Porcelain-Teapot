@@ -3,7 +3,7 @@ import "./Styles.css";
 import Cup from "../images/icons/cup_icon.png";
 import Badge from "../images/icons/badge.png";
 import Grains from "../images/icons/grains.png";
-import Coffee from "../images/icons/coffee.png";
+import Coffee from "../images/icons/1.png";
 import Cup1 from "../images/cups/Cup1.png";
 import Cup2 from "../images/cups/Cup2.png";
 import Cup3 from "../images/cups/Cup3.png";
@@ -13,16 +13,16 @@ import Cup6 from "../images/cups/Cup6.png";
 import Cup7 from "../images/cups/Cup7.png";
 import Cup8 from "../images/cups/Cup8.png";
 import { Link } from "react-router-dom";
-import CoffeeCard from "./CoffeeCard";
+import TeaCard from "./TeaCard";
 
 const Home = () => {
-  const [coffees, setCoffees] = useState([]);
+  const [teas, setTeas] = useState([]);
   const [loading, setLoading] = useState(true);
   useEffect(() => {
-    fetch("https://espresso-emporium-server-nine.vercel.app/coffees")
+    fetch("https://porcelain-teapot-server-g165.vercel.app/teas")
       .then((res) => res.json())
       .then((data) => {
-        setCoffees(data);
+        setTeas(data);
         setLoading(false);
       });
   }, []);
@@ -33,10 +33,10 @@ const Home = () => {
         <div className="lg:w-2/5"></div>
         <div className="lg:w-2/5 p-2 space-y-2">
           <h1 className="text-4xl title text-white">
-            Would you like a Cup of Delicious Coffee?
+            Would you like a Cup of Delicious Tea?
           </h1>
           <p className="text-white text-xs">
-            It's coffee time - Sip & Savor - Relaxation in every sip! Get the
+            It's tea time - Sip & Savor - Relaxation in every sip! Get the
             nostalgia back!! Your companion of every moment!!! Enjoy the
             beautiful moments and make them memorable.
           </p>
@@ -55,8 +55,7 @@ const Home = () => {
               </div>
               <h2 className="title text-[#331A15] text-xl">Awesome Aroma</h2>
               <p className="text-xs text-[#1B1A1A]">
-                You will definitely be a fan of the design & aroma of your
-                coffee
+                You will definitely be a fan of the design & aroma of your tea
               </p>
             </div>
             {/* Feature Two */}
@@ -66,7 +65,7 @@ const Home = () => {
               </div>
               <h2 className="title text-[#331A15] text-xl">High Quality</h2>
               <p className="text-xs text-[#1B1A1A]">
-                We served the coffee to you maintaining the best quality
+                We served the tea to you maintaining the best quality
               </p>
             </div>
             {/* Feature Three */}
@@ -76,7 +75,7 @@ const Home = () => {
               </div>
               <h2 className="title text-[#331A15] text-xl">Pure Grades</h2>
               <p className="text-xs text-[#1B1A1A]">
-                The coffee is made of the green coffee beans which you will love
+                The tea is made of the green tea beans which you will love
               </p>
             </div>
             {/* Feature Four */}
@@ -86,34 +85,34 @@ const Home = () => {
               </div>
               <h2 className="title text-[#331A15] text-xl">Proper Roasting</h2>
               <p className="text-xs text-[#1B1A1A]">
-                Your coffee is brewed by first roasting the green coffee beans
+                Your tea is brewed by first roasting the green tea beans
               </p>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Coffee Section */}
+      {/* tea Section */}
       <div className="lg:w-[70%] w-full mx-auto my-11 p-5">
         <p className="text-center text-xs mb-2">--- Sip & Savor ---</p>
         <h1 className="title text-4xl text-center text-[#331A15]">
           Our Popular Products
         </h1>
-        <Link className="flex justify-center items-center my-3" to="/addCoffee">
+        <Link className="flex justify-center items-center my-3" to="/addtea">
           <button className="btn title flex justify-center items-center text-white bg-[#E3B577] border-[#331A15] text-shadow text-lg">
-            Add Coffee <img className="w-5" src={Cup} alt="" />{" "}
+            Add tea <img className="w-5" src={Cup} alt="" />{" "}
           </button>
         </Link>
         <div className="grid lg:grid-cols-2 grid-cols-1 my-11 gap-5">
           {
             // loading ? <span className="loading loading-dots loading-xl"></span> : ())
-            coffees.map((coffee) => (
-              <CoffeeCard
-                key={coffee._id}
-                coffee={coffee}
-                coffees={coffees}
-                setCoffees={setCoffees}
-              ></CoffeeCard>
+            teas.map((tea) => (
+              <TeaCard
+                key={tea._id}
+                tea={tea}
+                teas={teas}
+                setTeas={setTeas}
+              ></TeaCard>
             ))
           }
         </div>
