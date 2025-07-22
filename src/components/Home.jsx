@@ -123,28 +123,28 @@ const Home = () => {
         </h1>
         <div className="grid lg:grid-cols-4 grid-cols-1 gap-5 my-11">
           <div>
-            <img src={Cup1} alt="" />
+            <img src={Cup1} alt="" className="rounded-xl" />
           </div>
           <div>
-            <img src={Cup2} alt="" />
+            <img src={Cup3} alt="" className="rounded-xl" />
           </div>
           <div>
-            <img src={Cup3} alt="" />
+            <img src={Cup2} alt="" className="rounded-xl" />
           </div>
           <div>
-            <img src={Cup4} alt="" />
+            <img src={Cup8} alt="" className="rounded-xl" />
           </div>
           <div>
-            <img src={Cup5} alt="" />
+            <img src={Cup7} alt="" className="rounded-xl" />
           </div>
           <div>
-            <img src={Cup6} alt="" />
+            <img src={Cup4} alt="" className="rounded-xl" />
           </div>
           <div>
-            <img src={Cup7} alt="" />
+            <img src={Cup6} alt="" className="rounded-xl" />
           </div>
           <div>
-            <img src={Cup8} alt="" />
+            <img src={Cup5} alt="" className="rounded-xl" />
           </div>
         </div>
       </div>
