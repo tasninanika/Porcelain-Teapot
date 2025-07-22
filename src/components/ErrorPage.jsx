@@ -1,7 +1,8 @@
+import ErrorImage from "../images/404/404.gif";
 const ErrorPage = () => {
   return (
-    <div>
-      <h2></h2>
+    <div className="flex justify-center items-center">
+      <img src={ErrorImage} alt="" />
     </div>
   );
 };
