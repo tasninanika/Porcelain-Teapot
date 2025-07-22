@@ -27,7 +27,7 @@ const UpdateTea = () => {
     };
 
     // Sending data to the backend
-    fetch(`https://porcelain-teapot-server-jmmi.vercel.app/teas/${data._id}`, {
+    fetch(`https://porcelain-teapot-server.vercel.app/${data._id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",

@@ -6,14 +6,33 @@ const AddTea = () => {
   const handleAddTea = (e) => {
     e.preventDefault();
     const form = e.target;
-    const name = form.name.value;
-    const chef = form.chef.value;
-    const category = form.category.value;
-    const taste = form.taste.value;
-    const supplier = form.supplier.value;
-    const details = form.details.value;
-    const photo = form.photo.value;
-    const price = form.price.value;
+    const name = form.name.value.trim();
+    const chef = form.chef.value.trim();
+    const category = form.category.value.trim();
+    const taste = form.taste.value.trim();
+    const supplier = form.supplier.value.trim();
+    const details = form.details.value.trim();
+    const photo = form.photo.value.trim();
+    const price = form.price.value.trim();
+
+    if (
+      !name ||
+      !chef ||
+      !category ||
+      !taste ||
+      !supplier ||
+      !details ||
+      !photo ||
+      !price
+    ) {
+      Swal.fire({
+        title: "Warning",
+        text: "Please fill all fields!",
+        icon: "warning",
+      });
+      return;
+    }
+
     const newTea = {
       name,
       chef,
@@ -25,8 +44,7 @@ const AddTea = () => {
       price,
     };
 
-    // Sending data to the backend
-    fetch("https://porcelain-teapot-server-jmmi.vercel.app/teas", {
+    fetch("https://porcelain-teapot-server.vercel.app/teas", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -35,15 +53,32 @@ const AddTea = () => {
     })
       .then((res) => res.json())
       .then((data) => {
+        console.log("Response from server:", data);
         if (data.insertedId) {
           Swal.fire({
             title: "Hola!",
             text: "New Tea Added!",
             icon: "success",
           });
+          form.reset();
+        } else {
+          Swal.fire({
+            title: "Oops!",
+            text: "Failed to add tea.",
+            icon: "error",
+          });
         }
+      })
+      .catch((error) => {
+        console.error("Error while adding tea:", error);
+        Swal.fire({
+          title: "Error!",
+          text: "Something went wrong. Try again.",
+          icon: "error",
+        });
       });
   };
+
   return (
     <div className="w-[70%] mx-auto my-16">
       <Link className="title text-2xl flex items-center my-3" to="/">
@@ -60,7 +95,6 @@ const AddTea = () => {
           </p>
         </div>
         <form onSubmit={handleAddTea}>
-          {/* Coffe & Chef name input field added */}
           <div className="grid lg:grid-cols-2 grid-cols-1 gap-5">
             <div>
               <fieldset className="fieldset">
@@ -85,7 +119,7 @@ const AddTea = () => {
               </fieldset>
             </div>
           </div>
-          {/* Supplier & Taste input field added */}
+
           <div className="grid lg:grid-cols-2 grid-cols-1 gap-5">
             <div>
               <fieldset className="fieldset">
@@ -110,7 +144,7 @@ const AddTea = () => {
               </fieldset>
             </div>
           </div>
-          {/* Category & Details input field added */}
+
           <div className="grid lg:grid-cols-2 grid-cols-1 gap-5">
             <div>
               <fieldset className="fieldset">
@@ -135,7 +169,7 @@ const AddTea = () => {
               </fieldset>
             </div>
           </div>
-          {/* Photo & Price input field added */}
+
           <div className="grid lg:grid-cols-2 grid-cols-1 gap-5">
             <div>
               <fieldset className="fieldset">
@@ -160,6 +194,7 @@ const AddTea = () => {
               </fieldset>
             </div>
           </div>
+
           <input
             type="submit"
             className="btn w-full bg-[#D2B48C] border-[#331A15] border-1 mt-3"
