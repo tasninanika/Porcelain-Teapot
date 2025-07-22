@@ -18,7 +18,7 @@ const Footer = () => {
           <div className="grid lg:grid-cols-2 grid-cols-1 gap-5">
             <div className="space-y-2">
               <img src={headerLogo} className="w-11" />
-              <h1 className="title text-3xl text-[#331A15]">Porcelain Tea</h1>
+              <h1 className="title text-3xl text-[#998f6f]">Porcelain Tea</h1>
               <p className="text-[#1B1A1A]">
                 Always ready to be your friend. Come & Contact with us to share
                 your memorable moments, to share with your best companion.
@@ -37,7 +37,7 @@ const Footer = () => {
                   <FaLinkedin />
                 </p>
               </div>
-              <h1 className="title text-3xl text-[#331A15]">Get in Touch</h1>
+              <h1 className="title text-3xl text-[#998f6f]">Get in Touch</h1>
               <div className="flex items-center gap-5 space-y-2">
                 <div className="space-y-2 mt-2.5">
                   <p>
@@ -60,7 +60,7 @@ const Footer = () => {
               </div>
             </div>
             <div className="flex flex-col justify-center items-center gap-4">
-              <h1 className="title text-3xl text-[#331A15] text-center">
+              <h1 className="title text-3xl text-[#998f6f] text-center">
                 Connect with Us
               </h1>
               <div className="w-full space-y-2">
@@ -80,7 +80,7 @@ const Footer = () => {
                   placeholder="Message"
                 />
                 <input
-                  className="btn rounded-full border-[#331A15]"
+                  className="btn rounded-full border-[#998f6f]"
                   type="submit"
                   value={"Send Message"}
                   name=""
@@ -91,7 +91,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="w-full p-2 title footer-bg text-center text-white text-lg">
+      <div className="w-full p-2 title footer-bg text-center text-lg text-[#998f6f]">
         <h1>
           Copyright Porcelain Tea ! All Rights Reserved{" "}
           <a href="https://github.com/tasninanika" target="_blank">
