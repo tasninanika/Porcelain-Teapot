@@ -40,7 +40,7 @@ const Home = () => {
             nostalgia back!! Your companion of every moment!!! Enjoy the
             beautiful moments and make them memorable.
           </p>
-          <button className="btn bg-[#E3B577] shadow-none title text-xl hover:bg-transparent hover:text-white">
+          <button className="btn bg-[#e1d3a2] shadow-none title text-xl hover:bg-transparent hover:text-white">
             Learn More
           </button>
         </div>
@@ -53,7 +53,7 @@ const Home = () => {
               <div>
                 <img src={Cup} alt="" className="w-11 " />
               </div>
-              <h2 className="title text-[#331A15] text-xl">Awesome Aroma</h2>
+              <h2 className="title text-[#998f6f] text-xl">Awesome Aroma</h2>
               <p className="text-xs text-[#1B1A1A]">
                 You will definitely be a fan of the design & aroma of your tea
               </p>
@@ -63,7 +63,7 @@ const Home = () => {
               <div>
                 <img src={Badge} alt="" className="w-11" />
               </div>
-              <h2 className="title text-[#331A15] text-xl">High Quality</h2>
+              <h2 className="title text-[#998f6f] text-xl">High Quality</h2>
               <p className="text-xs text-[#1B1A1A]">
                 We served the tea to you maintaining the best quality
               </p>
@@ -73,7 +73,7 @@ const Home = () => {
               <div>
                 <img src={Grains} alt="" className="w-11" />
               </div>
-              <h2 className="title text-[#331A15] text-xl">Pure Grades</h2>
+              <h2 className="title text-[#998f6f] text-xl">Pure Grades</h2>
               <p className="text-xs text-[#1B1A1A]">
                 The tea is made of the green tea beans which you will love
               </p>
@@ -83,7 +83,7 @@ const Home = () => {
               <div>
                 <img src={Coffee} alt="" className="w-11" />
               </div>
-              <h2 className="title text-[#331A15] text-xl">Proper Roasting</h2>
+              <h2 className="title text-[#998f6f] text-xl">Proper Roasting</h2>
               <p className="text-xs text-[#1B1A1A]">
                 Your tea is brewed by first roasting the green tea beans
               </p>
@@ -95,11 +95,11 @@ const Home = () => {
       {/* tea Section */}
       <div className="lg:w-[70%] w-full mx-auto my-11 p-5">
         <p className="text-center text-xs mb-2">--- Sip & Savor ---</p>
-        <h1 className="title text-4xl text-center text-[#331A15]">
+        <h1 className="title text-4xl text-center text-[#998f6f]">
           Our Popular Products
         </h1>
         <Link className="flex justify-center items-center my-3" to="/addtea">
-          <button className="btn title flex justify-center items-center text-white bg-[#E3B577] border-[#331A15] text-shadow text-lg">
+          <button className="btn title flex justify-center items-center text-white bg-[#e1d3a2] border-[#331A15] text-shadow text-lg">
             Add tea <img className="w-5" src={Cup} alt="" />{" "}
           </button>
         </Link>
@@ -118,7 +118,7 @@ const Home = () => {
       {/* Instagram and Gallery Section */}
       <div className="lg:w-[70%] w-full mx-auto my-11 p-5">
         <p className="text-center text-xs mb-2">Follow Us Now</p>
-        <h1 className="title text-4xl text-center text-[#331A15]">
+        <h1 className="title text-4xl text-center text-[#998f6f]">
           Follow on Instagram
         </h1>
         <div className="grid lg:grid-cols-4 grid-cols-1 gap-5 my-11">
