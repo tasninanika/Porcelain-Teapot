@@ -88,10 +88,10 @@ const AddTea = () => {
         <div className="p-8">
           <h1 className="text-3xl title text-center">Add New Tea</h1>
           <p className="text-[12px] text-center">
-            Enhance your coffee collection by adding a new blend! Provide
-            details such as name, origin, flavor, and price. This form ensures
-            each tea entry is well-documented, making it easier to manage and
-            showcase your premium selections.
+            Enhance your tea collection by adding a new blend! Provide details
+            such as name, origin, flavor, and price. This form ensures each tea
+            entry is well-documented, making it easier to manage and showcase
+            your premium selections.
           </p>
         </div>
         <form onSubmit={handleAddTea}>
@@ -103,7 +103,7 @@ const AddTea = () => {
                   type="text"
                   className="input w-full"
                   name="name"
-                  placeholder="Enter coffee name"
+                  placeholder="Enter tea name"
                 />
               </fieldset>
             </div>
@@ -139,7 +139,7 @@ const AddTea = () => {
                   type="text"
                   className="input w-full"
                   name="taste"
-                  placeholder="Enter coffee taste"
+                  placeholder="Enter tea taste"
                 />
               </fieldset>
             </div>
@@ -153,7 +153,7 @@ const AddTea = () => {
                   type="text"
                   className="input w-full"
                   name="category"
-                  placeholder="Enter coffee category"
+                  placeholder="Enter tea category"
                 />
               </fieldset>
             </div>
@@ -164,7 +164,7 @@ const AddTea = () => {
                   type="text"
                   className="input w-full"
                   name="details"
-                  placeholder="Enter coffee details"
+                  placeholder="Enter tea details"
                 />
               </fieldset>
             </div>
@@ -189,7 +189,7 @@ const AddTea = () => {
                   type="text"
                   className="input w-full"
                   name="price"
-                  placeholder="Enter coffee price(BDT)"
+                  placeholder="Enter tea price(BDT)"
                 />
               </fieldset>
             </div>

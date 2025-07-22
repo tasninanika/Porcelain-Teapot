@@ -8,7 +8,7 @@ const Header = () => {
         <img className="w-9" src={headerLogo} alt="" />
       </div>
       <div>
-        <h2 className="text-3xl text-white title">Porcelain Teapot</h2>
+        <h2 className="text-3xl text-[#c3b488] title">Porcelain Teapot</h2>
       </div>
     </div>
   );

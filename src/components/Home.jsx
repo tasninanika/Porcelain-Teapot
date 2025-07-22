@@ -51,7 +51,7 @@ const Home = () => {
             {/* Feature One */}
             <div className="space-y-1">
               <div>
-                <img src={Cup} alt="" className="w-11" />
+                <img src={Cup} alt="" className="w-11 " />
               </div>
               <h2 className="title text-[#331A15] text-xl">Awesome Aroma</h2>
               <p className="text-xs text-[#1B1A1A]">

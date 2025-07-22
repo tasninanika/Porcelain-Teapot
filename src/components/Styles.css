@@ -1,10 +1,10 @@
 .header-bg,
 .footer-bg {
-    background-image: url('../images/more/header.jpg');
+    /* background-image: url('../images/more/header-banner.png'); */
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-    background-color: black;
+    background-color: #ECEAE3;
 }
 
 .title {
