@@ -15,7 +15,7 @@ const TeaCard = ({ tea, teas, setTeas }) => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`https://porcelain-teapot-server.vercel.app/${id}`, {
+        fetch(`https://porcelain-teapot-server.vercel.app/teas/${id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())
@@ -26,13 +26,14 @@ const TeaCard = ({ tea, teas, setTeas }) => {
                 text: "Your file has been deleted.",
                 icon: "success",
               });
-              const remaining = teas.filter((tea) => tea._id !== tea._id);
+              const remaining = teas.filter((t) => t._id !== id);
               setTeas(remaining);
             }
           });
       }
     });
   };
+
   return (
     <div className="bg-[#F5F4F1] p-2">
       <div className="flex justify-between items-center">

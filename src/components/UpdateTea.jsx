@@ -4,6 +4,7 @@ import Swal from "sweetalert2";
 
 const UpdateTea = () => {
   const data = useLoaderData();
+
   const handleUpdate = (e) => {
     e.preventDefault();
     const form = e.target;
@@ -15,7 +16,7 @@ const UpdateTea = () => {
     const details = form.details.value;
     const photo = form.photo.value;
     const price = form.price.value;
-    const updatedCoffee = {
+    const updatedTea = {
       name,
       chef,
       category,
@@ -27,12 +28,12 @@ const UpdateTea = () => {
     };
 
     // Sending data to the backend
-    fetch(`https://porcelain-teapot-server.vercel.app/${data._id}`, {
+    fetch(`https://porcelain-teapot-server.vercel.app/teas/${data._id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",
       },
-      body: JSON.stringify(updatedCoffee),
+      body: JSON.stringify(updatedTea),
     })
       .then((res) => res.json())
       .then((data) => {

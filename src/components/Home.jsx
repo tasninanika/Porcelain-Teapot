@@ -19,7 +19,7 @@ const Home = () => {
   const [teas, setTeas] = useState([]);
   const [loading, setLoading] = useState(true);
   useEffect(() => {
-    fetch("https://porcelain-teapot-server-jmmi.vercel.app/teas")
+    fetch("https://porcelain-teapot-server.vercel.app/teas")
       .then((res) => res.json())
       .then((data) => {
         setTeas(data);
@@ -104,17 +104,14 @@ const Home = () => {
           </button>
         </Link>
         <div className="grid lg:grid-cols-2 grid-cols-1 my-11 gap-5">
-          {
-            // loading ? <span className="loading loading-dots loading-xl"></span> : ())
-            teas.map((tea) => (
-              <TeaCard
-                key={tea._id}
-                tea={tea}
-                teas={teas}
-                setTeas={setTeas}
-              ></TeaCard>
-            ))
-          }
+          {teas.map((tea) => (
+            <TeaCard
+              key={tea._id}
+              tea={tea}
+              teas={teas}
+              setTeas={setTeas}
+            ></TeaCard>
+          ))}
         </div>
       </div>
 
