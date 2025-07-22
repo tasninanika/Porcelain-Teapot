@@ -44,7 +44,7 @@ const AddTea = () => {
       price,
     };
 
-    fetch("https://porcelain-teapot-server.vercel.app/teas/", {
+    fetch("https://porcelain-teapot-server.onrender.com/teas/", {
       method: "POST",
       headers: {
         "content-type": "application/json",

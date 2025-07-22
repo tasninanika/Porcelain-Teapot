@@ -22,7 +22,7 @@ const Home = () => {
   const [teas, setTeas] = useState([]);
   const [loading, setLoading] = useState(true);
   useEffect(() => {
-    fetch("https://porcelain-teapot-server.vercel.app/teas")
+    fetch("https://porcelain-teapot-server.onrender.com/teas")
       .then((res) => res.json())
       .then((data) => {
         setTeas(data);
@@ -34,7 +34,7 @@ const Home = () => {
       {/* Hero Banner */}
       <div className="hero bg-base-200 min-h-screen">
         <div className="hero-content flex-col lg:flex-row">
-          {/* Image Section (Left to Right Animation) */}
+          {/* Image Section */}
           <motion.div
             className="relative w-full lg:w-1/2 flex justify-center items-center"
             initial={{ x: -200, opacity: 0 }}
