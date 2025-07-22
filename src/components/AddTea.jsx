@@ -86,8 +86,10 @@ const AddTea = () => {
       </Link>
       <div className="bg-[#F4F3F0] p-11">
         <div className="p-8">
-          <h1 className="text-3xl title text-center">Add New Tea</h1>
-          <p className="text-[12px] text-center">
+          <h1 className="text-3xl text-[#998f6f] title text-center mb-3">
+            Add New Tea
+          </h1>
+          <p className="text-xs text-center">
             Enhance your tea collection by adding a new blend! Provide details
             such as name, origin, flavor, and price. This form ensures each tea
             entry is well-documented, making it easier to manage and showcase
@@ -197,7 +199,7 @@ const AddTea = () => {
 
           <input
             type="submit"
-            className="btn w-full bg-[#D2B48C] border-[#331A15] border-1 mt-3"
+            className="btn w-full bg-[#e1d3a2] border-[#331A15] border-1 mt-3"
             value="Add Tea"
           />
         </form>

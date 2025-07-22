@@ -35,12 +35,16 @@ const TeaCard = ({ tea, teas, setTeas }) => {
   };
 
   return (
-    <div className="bg-[#F5F4F1] p-2">
+    <div className="bg-[#F5F4F1] p-5 rounded-2xl">
       <div className="flex justify-between items-center">
         <div>
-          <img className="max-w-[150px] h-41" src={tea.photo} alt="" />
+          <img
+            className="max-w-[150px] h-41 rounded-xl"
+            src={tea.photo}
+            alt=""
+          />
         </div>
-        <div className="text-[14px] lg:mr-5">
+        <div className="text-md space-y-2">
           <p>
             <span className="font-semibold">Name: </span> {tea.name}
           </p>
@@ -51,7 +55,7 @@ const TeaCard = ({ tea, teas, setTeas }) => {
             <span className="font-semibold">Price: </span> {tea.price} Tk.
           </p>
         </div>
-        <div className="flex flex-col justify-center space-y-1 lg:mr-7">
+        <div className="flex flex-col justify-center space-y-3">
           <Link to={`teas/${tea._id}`}>
             <p className="bg-[#D2B48C] text-white p-2 w-8 rounded-sm cursor-pointer">
               <IoMdEye />

@@ -12,8 +12,11 @@ import Cup5 from "../images/cups/Cup5.png";
 import Cup6 from "../images/cups/Cup6.png";
 import Cup7 from "../images/cups/Cup7.png";
 import Cup8 from "../images/cups/Cup8.png";
+import BannerCup from "../images/more/banner-cup.jpg";
+import BannerCup2 from "../images/more/banner-cup2.jpg";
 import { Link } from "react-router-dom";
 import TeaCard from "./TeaCard";
+import { motion } from "framer-motion";
 
 const Home = () => {
   const [teas, setTeas] = useState([]);
@@ -29,62 +32,90 @@ const Home = () => {
   return (
     <div>
       {/* Hero Banner */}
-      <div className="hero h-[550px] lg:flex justify-center items-center">
-        <div className="lg:w-2/5"></div>
-        <div className="lg:w-2/5 p-2 space-y-2">
-          <h1 className="text-4xl title text-white">
-            Would you like a Cup of Delicious Tea?
-          </h1>
-          <p className="text-white text-xs">
-            It's tea time - Sip & Savor - Relaxation in every sip! Get the
-            nostalgia back!! Your companion of every moment!!! Enjoy the
-            beautiful moments and make them memorable.
-          </p>
-          <button className="btn bg-[#e1d3a2] shadow-none title text-xl hover:bg-transparent hover:text-white">
-            Learn More
-          </button>
+      <div className="hero bg-base-200 min-h-screen">
+        <div className="hero-content flex-col lg:flex-row">
+          {/* Image Section (Left to Right Animation) */}
+          <motion.div
+            className="relative w-full lg:w-1/2 flex justify-center items-center"
+            initial={{ x: -200, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ duration: 1, ease: "easeOut" }}
+          >
+            <img
+              src={BannerCup}
+              alt="Banner Cup"
+              className="max-w-sm rounded-lg shadow-2xl relative bottom-30 right-40 z-0 -rotate-12"
+            />
+            {/* Second Image Overlapping */}
+            <img
+              src={BannerCup2}
+              alt="Banner Cup 2"
+              className="max-w-sm rounded-lg shadow-xl absolute top-10 left-40 z-10 opacity-90 transform rotate-12"
+            />
+          </motion.div>
+
+          {/* Text Section (Right to Left Animation) */}
+          <motion.div
+            className="lg:w-1/2 p-4"
+            initial={{ x: 200, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
+          >
+            <h1 className="text-4xl title text-[#998f6f]">
+              Would you like a Cup of Delicious Tea?
+            </h1>
+            <p className="py-6 text-black text-sm">
+              It's tea time - Sip & Savor - Relaxation in every sip! Get the
+              nostalgia back!! Your companion of every moment!!! Enjoy the
+              beautiful moments and make them memorable.
+            </p>
+            <button className="btn bg-[#e1d3a2] shadow-none text-white title text-xl hover:bg-transparent hover:text-black border-[#331A15]">
+              Learn More
+            </button>
+          </motion.div>
         </div>
       </div>
-      <div className="bg-[#ECEAE3]">
+
+      <div className="bg-[]">
         <div className="w-[70%] mx-auto p-5">
-          <div className="grid lg:grid-cols-4 grid-cols-1 gap-6">
+          <div className="grid lg:grid-cols-4 grid-cols-1 gap-20">
             {/* Feature One */}
-            <div className="space-y-1">
+            <div className="space-y-1 flex flex-col justify-center items-center">
               <div>
-                <img src={Cup} alt="" className="w-11 " />
+                <img src={Cup} alt="" className="w-11" />
               </div>
               <h2 className="title text-[#998f6f] text-xl">Awesome Aroma</h2>
-              <p className="text-xs text-[#1B1A1A]">
+              <p className="text-xs text-center text-[#1B1A1A]">
                 You will definitely be a fan of the design & aroma of your tea
               </p>
             </div>
             {/* Feature Two */}
-            <div className="space-y-1">
+            <div className="space-y-1 flex flex-col justify-center items-center">
               <div>
                 <img src={Badge} alt="" className="w-11" />
               </div>
               <h2 className="title text-[#998f6f] text-xl">High Quality</h2>
-              <p className="text-xs text-[#1B1A1A]">
+              <p className="text-xs text-center text-[#1B1A1A]">
                 We served the tea to you maintaining the best quality
               </p>
             </div>
             {/* Feature Three */}
-            <div className="space-y-1">
+            <div className="space-y-1 flex flex-col justify-center items-center">
               <div>
                 <img src={Grains} alt="" className="w-11" />
               </div>
               <h2 className="title text-[#998f6f] text-xl">Pure Grades</h2>
-              <p className="text-xs text-[#1B1A1A]">
+              <p className="text-xs text-center text-[#1B1A1A]">
                 The tea is made of the green tea beans which you will love
               </p>
             </div>
             {/* Feature Four */}
-            <div className="space-y-1">
+            <div className="space-y-1 flex flex-col justify-center items-center">
               <div>
                 <img src={Coffee} alt="" className="w-11" />
               </div>
               <h2 className="title text-[#998f6f] text-xl">Proper Roasting</h2>
-              <p className="text-xs text-[#1B1A1A]">
+              <p className="text-xs text-center text-[#1B1A1A]">
                 Your tea is brewed by first roasting the green tea beans
               </p>
             </div>

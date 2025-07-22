@@ -14,7 +14,7 @@ const TeaDetails = () => {
             <img src={singleTea?.photo} className="lg:w-[350px]" alt="" />
           </div>
           <div className="w-full">
-            <h1 className="title text-2xl mb-3 text-[#331A15]">Niceties</h1>
+            <h1 className="title text-2xl mb-3 text-[#998f6f]">Niceties</h1>
             <p className="text-[14px] mt-1">
               <span className="font-semibold">Name: </span> {singleTea?.name}
             </p>

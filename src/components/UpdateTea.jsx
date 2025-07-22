@@ -53,7 +53,9 @@ const UpdateTea = () => {
       </Link>
       <div className="bg-[#F4F3F0] p-11">
         <div className="p-8">
-          <h1 className="text-3xl title text-center">Update Existing Tea</h1>
+          <h1 className="text-3xl title text-center text-[#998f6f] mb-3">
+            Update Existing Tea
+          </h1>
           <p className="text-[12px] text-center">
             Keep your tea details up to date with this form! Modify the name,
             origin, flavor, price, or any other details to ensure accurate and

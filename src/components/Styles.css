@@ -12,11 +12,11 @@
 }
 
 .hero {
-    background-image: url('../images/more/hero.png');
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    background-color: black;
+    /* background-image: url('../images/more/hero.png'); */
+    /* background-repeat: no-repeat; */
+    /* background-position: center center; */
+    /* background-size: cover; */
+    /* background-color: black; */
 }
 
 p {
