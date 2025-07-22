@@ -93,7 +93,7 @@ const Footer = () => {
       </div>
       <div className="w-full p-2 title footer-bg text-center text-lg text-[#998f6f]">
         <h1>
-          Copyright Porcelain Tea ! All Rights Reserved{" "}
+          &copy; Copyright Porcelain Tea ! All Rights Reserved{" "}
           <a href="https://github.com/tasninanika" target="_blank">
             Jarin Tasnin Anika
           </a>
