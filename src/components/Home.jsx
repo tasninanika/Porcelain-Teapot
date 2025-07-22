@@ -153,30 +153,15 @@ const Home = () => {
           Follow on Instagram
         </h1>
         <div className="grid lg:grid-cols-4 grid-cols-1 gap-5 my-11">
-          <div>
-            <img src={Cup1} alt="" className="rounded-xl" />
-          </div>
-          <div>
-            <img src={Cup3} alt="" className="rounded-xl" />
-          </div>
-          <div>
-            <img src={Cup2} alt="" className="rounded-xl" />
-          </div>
-          <div>
-            <img src={Cup8} alt="" className="rounded-xl" />
-          </div>
-          <div>
-            <img src={Cup7} alt="" className="rounded-xl" />
-          </div>
-          <div>
-            <img src={Cup4} alt="" className="rounded-xl" />
-          </div>
-          <div>
-            <img src={Cup6} alt="" className="rounded-xl" />
-          </div>
-          <div>
-            <img src={Cup5} alt="" className="rounded-xl" />
-          </div>
+          {[Cup1, Cup3, Cup2, Cup8, Cup7, Cup4, Cup6, Cup5].map((cup, idx) => (
+            <div key={idx} className="overflow-hidden rounded-xl">
+              <img
+                src={cup}
+                alt={`Cup ${idx + 1}`}
+                className="rounded-xl transform transition-transform duration-500 hover:scale-110 hover:rotate-3"
+              />
+            </div>
+          ))}
         </div>
       </div>
     </div>
