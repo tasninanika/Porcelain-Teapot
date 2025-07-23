@@ -23,7 +23,7 @@
 
 **Porcelain Tea** is a full-stack tea shop management web application where users can browse teas, add new teas, update information, or delete them.  
 The **frontend** is built with **React, Tailwind CSS, DaisyUI, and Framer Motion** for smooth animations.  
-The **backend** is built with **Node.js, Express.js, and MongoDB**, deployed on **Vercel**, while the frontend is deployed on **Firebase**.
+The **backend** is built with **Node.js, Express.js, and MongoDB**, deployed on **Render**, while the frontend is deployed on **Firebase**.
 
 ---
 
