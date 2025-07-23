@@ -9,6 +9,7 @@
   <img src="https://img.shields.io/badge/TailwindCSS-38B2AC?style=flat-square&logo=tailwind-css&logoColor=white"/>
   <img src="https://img.shields.io/badge/DaisyUI-FF49DB?style=flat-square"/>
   <img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black"/>
+  <img src="https://img.shields.io/badge/React%20Router-CA4245?style=flat-square&logo=react-router&logoColor=white"/>
   <img src="https://img.shields.io/badge/Framer%20Motion-FB5398?style=flat-square"/>
   <img src="https://img.shields.io/badge/SweetAlert2-FF6F91?style=flat-square"/>
   <img src="https://img.shields.io/badge/Node.js-43853D?style=flat-square&logo=node.js&logoColor=white"/>
@@ -65,6 +66,7 @@ The **backend** is built with **Node.js, Express.js, and MongoDB**, deployed on 
 | **Tailwind CSS** | Utility-first responsive design |
 | **DaisyUI**   | Pre-styled Tailwind components |
 | **React**     | Component-based frontend |
+| **React Router**     | Navigation & route management |
 | **Framer Motion** | Smooth animations |
 | **SweetAlert2** | Success/Error/Confirmation modals |
 | **React Icons** | Icon library |
